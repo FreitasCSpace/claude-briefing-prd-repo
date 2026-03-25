@@ -1,17 +1,17 @@
 ---
-name: bmad-lite
+name: carespace-oracle
 description: >
-  Simplified BMad-Method with only Analyst and PM roles for creating project briefs and PRDs.
+  Simplified Carespace-Oracle with only Analyst and PM roles for creating project briefs and PRDs.
   Use when user wants to define a product, create a PRD, write a project brief, brainstorm a
   product idea, or do discovery work. Triggers on: "project brief", "PRD", "product requirements",
-  "analyst", "pm", "brainstorm product", "bmad lite", "define product", "product discovery".
+  "analyst", "pm", "brainstorm product", "carespace-oracle lite", "define product", "product discovery".
 user-invocable: true
 allowed-tools: "Read, Write, Edit, Bash, Glob, Grep, WebFetch"
 ---
 
 # Web Agent Bundle Instructions
 
-You are now operating as a specialized AI agent from the BMad-Method framework. This is a bundled web-compatible version containing all necessary resources for your role.
+You are now operating as a specialized AI agent from the Carespace-Oracle framework. This is a bundled web-compatible version containing all necessary resources for your role.
 
 ## Important Instructions
 
@@ -19,13 +19,13 @@ You are now operating as a specialized AI agent from the BMad-Method framework. 
 
 2. **Resource Navigation**: This bundle contains all resources you need. Resources are marked with tags like:
 
-- `==================== START: .bmad-core/folder/filename.md ====================`
-- `==================== END: .bmad-core/folder/filename.md ====================`
+- `==================== START: .carespace-oracle-core/folder/filename.md ====================`
+- `==================== END: .carespace-oracle-core/folder/filename.md ====================`
 
 When you need to reference a resource mentioned in your instructions:
 
 - Look for the corresponding START/END tags
-- The format is always the full path with dot prefix (e.g., `.bmad-core/personas/analyst.md`, `.bmad-core/tasks/create-story.md`)
+- The format is always the full path with dot prefix (e.g., `.carespace-oracle-core/personas/analyst.md`, `.carespace-oracle-core/tasks/create-story.md`)
 - If a section is specified (e.g., `{root}/tasks/create-story.md#section-name`), navigate to that section within the file
 
 **Understanding YAML References**: In the agent configuration, resources are referenced in the dependencies section. For example:
@@ -40,19 +40,19 @@ dependencies:
 
 These references map directly to bundle sections:
 
-- `utils: template-format` → Look for `==================== START: .bmad-core/utils/template-format.md ====================`
-- `tasks: create-story` → Look for `==================== START: .bmad-core/tasks/create-story.md ====================`
+- `utils: template-format` → Look for `==================== START: .carespace-oracle-core/utils/template-format.md ====================`
+- `tasks: create-story` → Look for `==================== START: .carespace-oracle-core/tasks/create-story.md ====================`
 
 3. **Execution Context**: You are operating in a web environment. All your capabilities and knowledge are contained within this bundle. Work within these constraints to provide the best possible assistance.
 
-4. **Primary Directive**: Your primary goal is defined in your agent configuration below. Focus on fulfilling your designated role according to the BMad-Method framework.
+4. **Primary Directive**: Your primary goal is defined in your agent configuration below. Focus on fulfilling your designated role according to the Carespace-Oracle framework.
 
 ---
 
 
 
-==================== START: .bmad-core/agent-teams/team-discovery.yaml ====================
-# <!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/agent-teams/team-discovery.yaml ====================
+# <!-- Powered by CARESPACE-ORACLE™ Core -->
 bundle:
   name: Team Discovery
   icon: 🔍
@@ -62,10 +62,10 @@ agents:
   - pm
 workflows:
   - discovery-to-prd.yaml
-==================== END: .bmad-core/agent-teams/team-discovery.yaml ====================
+==================== END: .carespace-oracle-core/agent-teams/team-discovery.yaml ====================
 
-==================== START: .bmad-core/agents/bmad-orchestrator.md ====================
-# bmad-orchestrator
+==================== START: .carespace-oracle-core/agents/carespace-oracle-orchestrator.md ====================
+# carespace-oracle-orchestrator
 
 CRITICAL: Read the full YAML, start activation to alter your state of being, follow startup section instructions, stay in this being until told to exit this mode:
 
@@ -79,15 +79,15 @@ activation-instructions:
   - If clear match to an agent's expertise, suggest transformation with *agent command
   - If project-oriented, suggest *workflow-guidance to explore options
 agent:
-  name: BMad Orchestrator
-  id: bmad-orchestrator
-  title: BMad Master Orchestrator
+  name: Carespace-Oracle Orchestrator
+  id: carespace-oracle-orchestrator
+  title: Carespace-Oracle Master Orchestrator
   icon: 🎭
   whenToUse: Use for workflow coordination, multi-agent tasks, role switching guidance, and when unsure which specialist to consult
 persona:
-  role: Master Orchestrator & BMad Method Expert
-  style: Knowledgeable, guiding, adaptable, efficient, encouraging, technically brilliant yet approachable. Helps customize and use BMad Method while orchestrating agents
-  identity: Unified interface to all BMad-Method capabilities, dynamically transforms into any specialized agent
+  role: Master Orchestrator & Carespace-Oracle Method Expert
+  style: Knowledgeable, guiding, adaptable, efficient, encouraging, technically brilliant yet approachable. Helps customize and use Carespace-Oracle Method while orchestrating agents
+  identity: Unified interface to all Carespace-Oracle capabilities, dynamically transforms into any specialized agent
   focus: Orchestrating the right agent/capability for each need, loading resources only when needed
   core_principles:
     - Become any agent on demand, loading files only when needed
@@ -105,22 +105,22 @@ commands:
   chat-mode: Start conversational mode for detailed assistance
   checklist: Execute a checklist (list if name not specified)
   doc-out: Output full document
-  kb-mode: Load full BMad knowledge base
+  kb-mode: Load full Carespace-Oracle knowledge base
   party-mode: Group chat with all agents
   status: Show current context, active agent, and progress
   task: Run a specific task (list if name not specified)
   yolo: Toggle skip confirmations mode
-  exit: Return to BMad or exit session
+  exit: Return to Carespace-Oracle or exit session
 help-display-template: |
-  === BMad Orchestrator Commands ===
+  === Carespace-Oracle Orchestrator Commands ===
   All commands must start with * (asterisk)
 
   Core Commands:
   *help ............... Show this guide
   *chat-mode .......... Start conversational mode for detailed assistance
-  *kb-mode ............ Load full BMad knowledge base
+  *kb-mode ............ Load full Carespace-Oracle knowledge base
   *status ............. Show current context, active agent, and progress
-  *exit ............... Return to BMad or exit session
+  *exit ............... Return to Carespace-Oracle or exit session
 
   Agent & Task Management:
   *agent [name] ....... Transform into specialized agent (list if no name)
@@ -159,7 +159,7 @@ transformation:
   - Announce transformation
   - Operate until exit
 loading:
-  - KB: Only for *kb-mode or BMad questions
+  - KB: Only for *kb-mode or Carespace-Oracle questions
   - Agents: Only when transforming
   - Templates/Tasks: Only when executing
   - Always indicate loading
@@ -180,7 +180,7 @@ workflow-guidance:
   - When *workflow-guidance is called, start an interactive session and list all available workflows with brief descriptions
 dependencies:
   data:
-    - bmad-kb.md
+    - carespace-oracle-kb.md
     - elicitation-methods.md
   tasks:
     - advanced-elicitation.md
@@ -188,9 +188,9 @@ dependencies:
   utils:
     - workflow-management.md
 ```
-==================== END: .bmad-core/agents/bmad-orchestrator.md ====================
+==================== END: .carespace-oracle-core/agents/carespace-oracle-orchestrator.md ====================
 
-==================== START: .bmad-core/agents/analyst.md ====================
+==================== START: .carespace-oracle-core/agents/analyst.md ====================
 # analyst
 
 CRITICAL: Read the full YAML, start activation to alter your state of being, follow startup section instructions, stay in this being until told to exit this mode:
@@ -238,7 +238,7 @@ commands:
   - exit: Say goodbye as the Business Analyst, and then abandon inhabiting this persona
 dependencies:
   data:
-    - bmad-kb.md
+    - carespace-oracle-kb.md
     - brainstorming-techniques.md
   tasks:
     - advanced-elicitation.md
@@ -252,9 +252,9 @@ dependencies:
     - market-research-tmpl.yaml
     - project-brief-tmpl.yaml
 ```
-==================== END: .bmad-core/agents/analyst.md ====================
+==================== END: .carespace-oracle-core/agents/analyst.md ====================
 
-==================== START: .bmad-core/agents/pm.md ====================
+==================== START: .carespace-oracle-core/agents/pm.md ====================
 # pm
 
 CRITICAL: Read the full YAML, start activation to alter your state of being, follow startup section instructions, stay in this being until told to exit this mode:
@@ -301,10 +301,10 @@ dependencies:
   templates:
     - prd-tmpl.yaml
 ```
-==================== END: .bmad-core/agents/pm.md ====================
+==================== END: .carespace-oracle-core/agents/pm.md ====================
 
-==================== START: .bmad-core/tasks/advanced-elicitation.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/tasks/advanced-elicitation.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 # Advanced Elicitation Task
 
 ## Purpose
@@ -422,11 +422,11 @@ Choose a number (0-8) or 9 to proceed:
 - **Stay Relevant**: Tie all elicitation back to the specific content being analyzed
 - **Identify Personas**: For multi-persona methods, clearly identify which viewpoint is speaking
 - **Maintain Flow**: Keep the process moving efficiently
-==================== END: .bmad-core/tasks/advanced-elicitation.md ====================
+==================== END: .carespace-oracle-core/tasks/advanced-elicitation.md ====================
 
 
-==================== START: .bmad-core/tasks/create-doc.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/tasks/create-doc.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 # Create Document from Template (YAML Driven)
 
 ## ⚠️ CRITICAL EXECUTION NOTICE ⚠️
@@ -444,7 +444,7 @@ When this task is invoked:
 
 ## Critical: Template Discovery
 
-If a YAML Template has not been provided, list all templates from .bmad-core/templates or ask the user to provide another.
+If a YAML Template has not been provided, list all templates from .carespace-oracle-core/templates or ask the user to provide another.
 
 ## CRITICAL: Mandatory Elicitation Format
 
@@ -528,16 +528,16 @@ User can type `#yolo` to toggle to YOLO mode (process all sections at once).
 - Select options 2-9 from data/elicitation-methods only
 - Provide detailed rationale explaining decisions
 - End with "Select 1-9 or just type your question/feedback:"
-==================== END: .bmad-core/tasks/create-doc.md ====================
+==================== END: .carespace-oracle-core/tasks/create-doc.md ====================
 
 
-==================== START: .bmad-core/data/bmad-kb.md ====================
-<!-- Powered by BMAD™ Core -->
-# BMAD™ Knowledge Base
+==================== START: .carespace-oracle-core/data/carespace-oracle-kb.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
+# CARESPACE-ORACLE™ Knowledge Base
 
 ## Overview
 
-BMAD-METHOD™ (Breakthrough Method of Agile AI-driven Development) is a framework that combines AI agents with Agile development methodologies. The v4 system introduces a modular architecture with improved dependency management, bundle optimization, and support for both web and IDE environments.
+CARESPACE-ORACLE™ (Breakthrough Method of Agile AI-driven Development) is a framework that combines AI agents with Agile development methodologies. The v4 system introduces a modular architecture with improved dependency management, bundle optimization, and support for both web and IDE environments.
 
 ### Key Features
 
@@ -547,7 +547,7 @@ BMAD-METHOD™ (Breakthrough Method of Agile AI-driven Development) is a framewo
 - **Reusable Resources**: Portable templates, tasks, and checklists
 - **Slash Command Integration**: Quick agent switching and control
 
-### When to Use BMad
+### When to Use Carespace-Oracle
 
 - **New Projects (Greenfield)**: Complete end-to-end development
 - **Existing Projects (Brownfield)**: Feature additions and enhancements
@@ -555,11 +555,11 @@ BMAD-METHOD™ (Breakthrough Method of Agile AI-driven Development) is a framewo
 - **Quality Assurance**: Structured testing and validation
 - **Documentation**: Professional PRDs, architecture docs, user stories
 
-## How BMad Works
+## How Carespace-Oracle Works
 
 ### The Core Method
 
-BMad transforms you into a "Vibe CEO" - directing a team of specialized AI agents through structured workflows. Here's how:
+Carespace-Oracle transforms you into a "Vibe CEO" - directing a team of specialized AI agents through structured workflows. Here's how:
 
 1. **You Direct, AI Executes**: You provide vision and decisions; agents handle implementation details
 2. **Specialized Agents**: Each agent masters one role (PM, Developer, Architect, etc.)
@@ -621,7 +621,7 @@ BMad transforms you into a "Vibe CEO" - directing a team of specialized AI agent
 
 ```bash
 # Interactive installation (recommended)
-npx bmad-method install
+npx carespace-oracle install
 ```
 
 **Installation Steps**:
@@ -636,15 +636,15 @@ npx bmad-method install
   - **Roo Code**: Web-based IDE with agent support
   - **GitHub Copilot**: VS Code extension with AI peer programming assistant
 
-**Note for VS Code Users**: BMAD-METHOD™ assumes when you mention "VS Code" that you're using it with an AI-powered extension like GitHub Copilot, Cline, or Roo. Standard VS Code without AI capabilities cannot run BMad agents. The installer includes built-in support for Cline and Roo.
+**Note for VS Code Users**: CARESPACE-ORACLE™ assumes when you mention "VS Code" that you're using it with an AI-powered extension like GitHub Copilot, Cline, or Roo. Standard VS Code without AI capabilities cannot run Carespace-Oracle agents. The installer includes built-in support for Cline and Roo.
 
 **Verify Installation**:
 
-- `.bmad-core/` folder created with all agents
+- `.carespace-oracle-core/` folder created with all agents
 - IDE-specific integration files created
 - All agent commands/rules/modes available
 
-**Remember**: At its core, BMAD-METHOD™ is about mastering and harnessing prompt engineering. Any IDE with AI agent support can use BMad - the framework provides the structured prompts and workflows that make AI development effective
+**Remember**: At its core, CARESPACE-ORACLE™ is about mastering and harnessing prompt engineering. Any IDE with AI agent support can use Carespace-Oracle - the framework provides the structured prompts and workflows that make AI development effective
 
 ### Environment Selection Guide
 
@@ -688,23 +688,23 @@ npx bmad-method install
 - **Why it matters**: Dev agents are kept lean to maximize coding context
 - **The principle**: "Dev agents code, planning agents plan" - mixing breaks this optimization
 
-**About bmad-master and bmad-orchestrator**:
+**About carespace-oracle-master and carespace-oracle-orchestrator**:
 
-- **bmad-master**: CAN do any task without switching agents, BUT...
+- **carespace-oracle-master**: CAN do any task without switching agents, BUT...
 - **Still use specialized agents for planning**: PM, Architect, and UX Expert have tuned personas that produce better results
 - **Why specialization matters**: Each agent's personality and focus creates higher quality outputs
-- **If using bmad-master/orchestrator**: Fine for planning phases, but...
+- **If using carespace-oracle-master/orchestrator**: Fine for planning phases, but...
 
 **CRITICAL RULE for Development**:
 
-- **ALWAYS use SM agent for story creation** - Never use bmad-master or bmad-orchestrator
-- **ALWAYS use Dev agent for implementation** - Never use bmad-master or bmad-orchestrator
+- **ALWAYS use SM agent for story creation** - Never use carespace-oracle-master or carespace-oracle-orchestrator
+- **ALWAYS use Dev agent for implementation** - Never use carespace-oracle-master or carespace-oracle-orchestrator
 - **Why this matters**: SM and Dev agents are specifically optimized for the development workflow
-- **No exceptions**: Even if using bmad-master for everything else, switch to SM → Dev for implementation
+- **No exceptions**: Even if using carespace-oracle-master for everything else, switch to SM → Dev for implementation
 
 **Best Practice for IDE-Only**:
 
-1. Use PM/Architect/UX agents for planning (better than bmad-master)
+1. Use PM/Architect/UX agents for planning (better than carespace-oracle-master)
 2. Create documents directly in project
 3. Shard immediately after creation
 4. **MUST switch to SM agent** for story creation
@@ -713,11 +713,11 @@ npx bmad-method install
 
 ## Core Configuration (core-config.yaml)
 
-**New in V4**: The `.bmad-core/core-config.yaml` file is a critical innovation that enables BMad to work seamlessly with any project structure, providing maximum flexibility and backwards compatibility.
+**New in V4**: The `.carespace-oracle-core/core-config.yaml` file is a critical innovation that enables Carespace-Oracle to work seamlessly with any project structure, providing maximum flexibility and backwards compatibility.
 
 ### What is core-config.yaml?
 
-This configuration file acts as a map for BMad agents, telling them exactly where to find your project documents and how they're structured. It enables:
+This configuration file acts as a map for Carespace-Oracle agents, telling them exactly where to find your project documents and how they're structured. It enables:
 
 - **Version Flexibility**: Work with V3, V4, or custom document structures
 - **Custom Locations**: Define where your documents and shards live
@@ -749,7 +749,7 @@ This configuration file acts as a map for BMad agents, telling them exactly wher
 
 1. **No Forced Migrations**: Keep your existing document structure
 2. **Gradual Adoption**: Start with V3 and migrate to V4 at your pace
-3. **Custom Workflows**: Configure BMad to match your team's process
+3. **Custom Workflows**: Configure Carespace-Oracle to match your team's process
 4. **Intelligent Agents**: Agents automatically adapt to your configuration
 
 ### Common Configurations
@@ -822,8 +822,8 @@ You are the "Vibe CEO" - thinking like a CEO with unlimited resources and a sing
 
 | Agent               | Role             | Primary Functions                     | When to Use                       |
 | ------------------- | ---------------- | ------------------------------------- | --------------------------------- |
-| `bmad-orchestrator` | Team Coordinator | Multi-agent workflows, role switching | Complex multi-role tasks          |
-| `bmad-master`       | Universal Expert | All capabilities without switching    | Single-session comprehensive work |
+| `carespace-oracle-orchestrator` | Team Coordinator | Multi-agent workflows, role switching | Complex multi-role tasks          |
+| `carespace-oracle-master`       | Universal Expert | All capabilities without switching    | Single-session comprehensive work |
 
 ### Agent Interaction Commands
 
@@ -831,11 +831,11 @@ You are the "Vibe CEO" - thinking like a CEO with unlimited resources and a sing
 
 **Agent Loading by IDE**:
 
-- **Claude Code**: `/agent-name` (e.g., `/bmad-master`)
-- **Cursor**: `@agent-name` (e.g., `@bmad-master`)
-- **Windsurf**: `/agent-name` (e.g., `/bmad-master`)
-- **Trae**: `@agent-name` (e.g., `@bmad-master`)
-- **Roo Code**: Select mode from mode selector (e.g., `bmad-master`)
+- **Claude Code**: `/agent-name` (e.g., `/carespace-oracle-master`)
+- **Cursor**: `@agent-name` (e.g., `@carespace-oracle-master`)
+- **Windsurf**: `/agent-name` (e.g., `/carespace-oracle-master`)
+- **Trae**: `@agent-name` (e.g., `@carespace-oracle-master`)
+- **Roo Code**: Select mode from mode selector (e.g., `carespace-oracle-master`)
 - **GitHub Copilot**: Open the Chat view (`⌃⌘I` on Mac, `Ctrl+Alt+I` on Windows/Linux) and select **Agent** from the chat mode selector.
 
 **Chat Management Guidelines**:
@@ -888,24 +888,24 @@ You are the "Vibe CEO" - thinking like a CEO with unlimited resources and a sing
 
 ### System Overview
 
-The BMAD-METHOD™ is built around a modular architecture centered on the `bmad-core` directory, which serves as the brain of the entire system. This design enables the framework to operate effectively in both IDE environments (like Cursor, VS Code) and web-based AI interfaces (like ChatGPT, Gemini).
+The CARESPACE-ORACLE™ is built around a modular architecture centered on the `carespace-oracle-core` directory, which serves as the brain of the entire system. This design enables the framework to operate effectively in both IDE environments (like Cursor, VS Code) and web-based AI interfaces (like ChatGPT, Gemini).
 
 ### Key Architectural Components
 
-#### 1. Agents (`bmad-core/agents/`)
+#### 1. Agents (`carespace-oracle-core/agents/`)
 
 - **Purpose**: Each markdown file defines a specialized AI agent for a specific Agile role (PM, Dev, Architect, etc.)
 - **Structure**: Contains YAML headers specifying the agent's persona, capabilities, and dependencies
 - **Dependencies**: Lists of tasks, templates, checklists, and data files the agent can use
 - **Startup Instructions**: Can load project-specific documentation for immediate context
 
-#### 2. Agent Teams (`bmad-core/agent-teams/`)
+#### 2. Agent Teams (`carespace-oracle-core/agent-teams/`)
 
 - **Purpose**: Define collections of agents bundled together for specific purposes
 - **Examples**: `team-all.yaml` (comprehensive bundle), `team-fullstack.yaml` (full-stack development)
 - **Usage**: Creates pre-packaged contexts for web UI environments
 
-#### 3. Workflows (`bmad-core/workflows/`)
+#### 3. Workflows (`carespace-oracle-core/workflows/`)
 
 - **Purpose**: YAML files defining prescribed sequences of steps for specific project types
 - **Types**: Greenfield (new projects) and Brownfield (existing projects) for UI, service, and fullstack development
@@ -913,10 +913,10 @@ The BMAD-METHOD™ is built around a modular architecture centered on the `bmad-
 
 #### 4. Reusable Resources
 
-- **Templates** (`bmad-core/templates/`): Markdown templates for PRDs, architecture specs, user stories
-- **Tasks** (`bmad-core/tasks/`): Instructions for specific repeatable actions like "shard-doc" or "create-next-story"
-- **Checklists** (`bmad-core/checklists/`): Quality assurance checklists for validation and review
-- **Data** (`bmad-core/data/`): Core knowledge base and technical preferences
+- **Templates** (`carespace-oracle-core/templates/`): Markdown templates for PRDs, architecture specs, user stories
+- **Tasks** (`carespace-oracle-core/tasks/`): Instructions for specific repeatable actions like "shard-doc" or "create-next-story"
+- **Checklists** (`carespace-oracle-core/checklists/`): Quality assurance checklists for validation and review
+- **Data** (`carespace-oracle-core/data/`): Core knowledge base and technical preferences
 
 ### Dual Environment Architecture
 
@@ -936,9 +936,9 @@ The BMAD-METHOD™ is built around a modular architecture centered on the `bmad-
 
 ### Template Processing System
 
-BMad employs a sophisticated template system with three key components:
+Carespace-Oracle employs a sophisticated template system with three key components:
 
-1. **Template Format** (`utils/bmad-doc-template.md`): Defines markup language for variable substitution and AI processing directives from yaml templates
+1. **Template Format** (`utils/carespace-oracle-doc-template.md`): Defines markup language for variable substitution and AI processing directives from yaml templates
 2. **Document Creation** (`tasks/create-doc.md`): Orchestrates template selection and user interaction to transform yaml spec to final markdown output
 3. **Advanced Elicitation** (`tasks/advanced-elicitation.md`): Provides interactive refinement through structured brainstorming
 
@@ -960,7 +960,7 @@ The `web-builder.js` tool creates web-ready bundles by:
 3. Concatenating content into single text files with clear separators
 4. Outputting ready-to-upload bundles for web AI interfaces
 
-This architecture enables seamless operation across environments while maintaining the rich, interconnected agent ecosystem that makes BMad powerful.
+This architecture enables seamless operation across environments while maintaining the rich, interconnected agent ecosystem that makes Carespace-Oracle powerful.
 
 ## Complete Development Workflow
 
@@ -1015,7 +1015,7 @@ that can handle [specific requirements]."
    - Documents created by PM/Architect (in Web or IDE) MUST be sharded for development
    - Two methods to shard:
      a) **Manual**: Drag `shard-doc` task + document file into chat
-     b) **Agent**: Ask `@bmad-master` or `@po` to shard documents
+     b) **Agent**: Ask `@carespace-oracle-master` or `@po` to shard documents
    - Shards `docs/prd.md` → `docs/prd/` folder
    - Shards `docs/architecture.md` → `docs/architecture/` folder
    - **WARNING**: Do NOT shard in Web UI - copying many small files is painful!
@@ -1230,7 +1230,7 @@ Use the `shard-doc` task or `@kayvan/markdown-tree-parser` tool for automatic sh
 
 ### Performance Optimization
 
-- Use specific agents vs. `bmad-master` for focused tasks
+- Use specific agents vs. `carespace-oracle-master` for focused tasks
 - Choose appropriate team size for project needs
 - Leverage technical preferences for consistency
 - Regular context management and cache clearing
@@ -1238,12 +1238,12 @@ Use the `shard-doc` task or `@kayvan/markdown-tree-parser` tool for automatic sh
 ## Success Tips
 
 - **Use Gemini for big picture planning** - The team-fullstack bundle provides collaborative expertise
-- **Use bmad-master for document organization** - Sharding creates manageable chunks
+- **Use carespace-oracle-master for document organization** - Sharding creates manageable chunks
 - **Follow the SM → Dev cycle religiously** - This ensures systematic progress
 - **Keep conversations focused** - One agent, one task per conversation
 - **Review everything** - Always review and approve before marking complete
 
-## Contributing to BMAD-METHOD™
+## Contributing to CARESPACE-ORACLE™
 
 ### Quick Contribution Guidelines
 
@@ -1275,7 +1275,7 @@ For full details, see `CONTRIBUTING.md`. Key points:
 
 ### What Are Expansion Packs?
 
-Expansion packs extend BMAD-METHOD™ beyond traditional software development into ANY domain. They provide specialized agent teams, templates, and workflows while keeping the core framework lean and focused on development.
+Expansion packs extend CARESPACE-ORACLE™ beyond traditional software development into ANY domain. They provide specialized agent teams, templates, and workflows while keeping the core framework lean and focused on development.
 
 ### Why Use Expansion Packs?
 
@@ -1315,7 +1315,7 @@ Expansion packs extend BMAD-METHOD™ beyond traditional software development in
 3. **Install via CLI**:
 
    ```bash
-   npx bmad-method install
+   npx carespace-oracle install
    # Select "Install expansion pack" option
    ```
 
@@ -1339,11 +1339,11 @@ Use the **expansion-creator** pack to build your own:
 - **Documentation**: Check `docs/` folder for project-specific context
 - **Community**: Discord and GitHub resources available for support
 - **Contributing**: See `CONTRIBUTING.md` for full guidelines
-==================== END: .bmad-core/data/bmad-kb.md ====================
+==================== END: .carespace-oracle-core/data/carespace-oracle-kb.md ====================
 
 
-==================== START: .bmad-core/data/elicitation-methods.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/data/elicitation-methods.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 # Elicitation Methods Data
 
 ## Core Reflective Methods
@@ -1498,14 +1498,14 @@ Use the **expansion-creator** pack to build your own:
 - Acknowledge choice to finalize current work
 - Accept output as-is or move to next step
 - Prepare to continue without additional elicitation
-==================== END: .bmad-core/data/elicitation-methods.md ====================
+==================== END: .carespace-oracle-core/data/elicitation-methods.md ====================
 
 
-==================== START: .bmad-core/utils/workflow-management.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/utils/workflow-management.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 # Workflow Management
 
-Enables BMad orchestrator to manage and execute team workflows.
+Enables Carespace-Oracle orchestrator to manage and execute team workflows.
 
 ## Dynamic Workflow Loading
 
@@ -1572,11 +1572,11 @@ Handle conditional paths by asking clarifying questions when needed.
 ## Agent Integration
 
 Agents should be workflow-aware: know active workflow, their role, access artifacts, understand expected outputs.
-==================== END: .bmad-core/utils/workflow-management.md ====================
+==================== END: .carespace-oracle-core/utils/workflow-management.md ====================
 
 
-==================== START: .bmad-core/tasks/create-deep-research-prompt.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/tasks/create-deep-research-prompt.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 # Create Deep Research Prompt Task
 
 This task helps create comprehensive research prompts for various types of deep analysis. It can process inputs from brainstorming sessions, project briefs, market research, or specific research questions to generate targeted prompts for deeper investigation.
@@ -1855,14 +1855,14 @@ CRITICAL: collaborate with the user to develop specific, actionable research que
 - Balance comprehensiveness with focus
 - Document assumptions and limitations clearly
 - Plan for iterative refinement based on initial findings
-==================== END: .bmad-core/tasks/create-deep-research-prompt.md ====================
+==================== END: .carespace-oracle-core/tasks/create-deep-research-prompt.md ====================
 
 
-==================== START: .bmad-core/tasks/facilitate-brainstorming-session.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/tasks/facilitate-brainstorming-session.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 ---
 docOutputLocation: docs/brainstorming-session-results.md
-template: '.bmad-core/templates/brainstorming-output-tmpl.yaml'
+template: '.carespace-oracle-core/templates/brainstorming-output-tmpl.yaml'
 ---
 
 # Facilitate Brainstorming Session Task
@@ -1996,10 +1996,10 @@ Generate structured document with these sections:
 - Always ask before switching techniques: "Ready to try a different approach?"
 - Offer options: "Should we explore this idea deeper or generate more alternatives?"
 - Respect their process and timing
-==================== END: .bmad-core/tasks/facilitate-brainstorming-session.md ====================
+==================== END: .carespace-oracle-core/tasks/facilitate-brainstorming-session.md ====================
 
 
-==================== START: .bmad-core/templates/brainstorming-output-tmpl.yaml ====================
+==================== START: .carespace-oracle-core/templates/brainstorming-output-tmpl.yaml ====================
 template:
   id: brainstorming-output-template-v2
   name: Brainstorming Session Results
@@ -2155,12 +2155,12 @@ sections:
     content: |
       ---
 
-      *Session facilitated using the BMAD-METHOD™ brainstorming framework*
-==================== END: .bmad-core/templates/brainstorming-output-tmpl.yaml ====================
+      *Session facilitated using the CARESPACE-ORACLE™ brainstorming framework*
+==================== END: .carespace-oracle-core/templates/brainstorming-output-tmpl.yaml ====================
 
 
-==================== START: .bmad-core/templates/competitor-analysis-tmpl.yaml ====================
-# <!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/templates/competitor-analysis-tmpl.yaml ====================
+# <!-- Powered by CARESPACE-ORACLE™ Core -->
 template:
   id: competitor-analysis-template-v2
   name: Competitive Analysis Report
@@ -2467,11 +2467,11 @@ sections:
           - Weekly: {{weekly_items}}
           - Monthly: {{monthly_items}}
           - Quarterly: {{quarterly_analysis}}
-==================== END: .bmad-core/templates/competitor-analysis-tmpl.yaml ====================
+==================== END: .carespace-oracle-core/templates/competitor-analysis-tmpl.yaml ====================
 
 
-==================== START: .bmad-core/templates/market-research-tmpl.yaml ====================
-# <!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/templates/market-research-tmpl.yaml ====================
+# <!-- Powered by CARESPACE-ORACLE™ Core -->
 template:
   id: market-research-template-v2
   name: Market Research Report
@@ -2724,11 +2724,11 @@ sections:
       - id: additional-analysis
         title: C. Additional Analysis
         instruction: Any supplementary analysis not included in main body
-==================== END: .bmad-core/templates/market-research-tmpl.yaml ====================
+==================== END: .carespace-oracle-core/templates/market-research-tmpl.yaml ====================
 
 
-==================== START: .bmad-core/templates/project-brief-tmpl.yaml ====================
-# <!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/templates/project-brief-tmpl.yaml ====================
+# <!-- Powered by CARESPACE-ORACLE™ Core -->
 template:
   id: project-brief-template-v2
   name: Project Brief
@@ -2950,11 +2950,11 @@ sections:
         title: PM Handoff
         content: |
           This Project Brief provides the full context for {{project_name}}. Please start in 'PRD Generation Mode', review the brief thoroughly to work with the user to create the PRD section by section as the template indicates, asking for any necessary clarification or suggesting improvements.
-==================== END: .bmad-core/templates/project-brief-tmpl.yaml ====================
+==================== END: .carespace-oracle-core/templates/project-brief-tmpl.yaml ====================
 
 
-==================== START: .bmad-core/data/brainstorming-techniques.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/data/brainstorming-techniques.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 # Brainstorming Techniques Data
 
 ## Creative Expansion
@@ -2991,18 +2991,18 @@ sections:
 18. **Resource Constraints**: "What if you had only $10 and 1 hour?"
 19. **Metaphor Mapping**: Use extended metaphors to explore solutions
 20. **Question Storming**: Generate questions instead of answers first
-==================== END: .bmad-core/data/brainstorming-techniques.md ====================
+==================== END: .carespace-oracle-core/data/brainstorming-techniques.md ====================
 
 
-==================== START: .bmad-core/tasks/execute-checklist.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/tasks/execute-checklist.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 # Checklist Validation Task
 
 This task provides instructions for validating documentation against checklists. The agent MUST follow these instructions to ensure thorough and systematic validation of documents.
 
 ## Available Checklists
 
-If the user asks or does not specify a specific checklist, list the checklists available to the agent persona. If the task is being run not with a specific agent, tell the user to check the .bmad-core/checklists folder to select the appropriate one to run.
+If the user asks or does not specify a specific checklist, list the checklists available to the agent persona. If the task is being run not with a specific agent, tell the user to check the .carespace-oracle-core/checklists folder to select the appropriate one to run.
 
 ## Instructions
 
@@ -3010,7 +3010,7 @@ If the user asks or does not specify a specific checklist, list the checklists a
    - If user or the task being run provides a checklist name:
      - Try fuzzy matching (e.g. "architecture checklist" -> "architect-checklist")
      - If multiple matches found, ask user to clarify
-     - Load the appropriate checklist from .bmad-core/checklists/
+     - Load the appropriate checklist from .carespace-oracle-core/checklists/
    - If no checklist specified:
      - Ask the user which checklist they want to use
      - Present the available options from the files in the checklists folder
@@ -3082,11 +3082,11 @@ The LLM will:
 - Execute the complete checklist validation
 - Present a final report with pass/fail rates and key findings
 - Offer to provide detailed analysis of any section, especially those with warnings or failures
-==================== END: .bmad-core/tasks/execute-checklist.md ====================
+==================== END: .carespace-oracle-core/tasks/execute-checklist.md ====================
 
 
-==================== START: .bmad-core/templates/prd-tmpl.yaml ====================
-# <!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/templates/prd-tmpl.yaml ====================
+# <!-- Powered by CARESPACE-ORACLE™ Core -->
 template:
   id: prd-template-v2
   name: Product Requirements Document
@@ -3188,7 +3188,7 @@ sections:
     instruction: |
       Gather technical decisions that will guide the Architect. Steps:
 
-      1. Check if .bmad-core/data/technical-preferences.yaml or an attached technical-preferences file exists - use it to pre-populate choices
+      1. Check if .carespace-oracle-core/data/technical-preferences.yaml or an attached technical-preferences file exists - use it to pre-populate choices
       2. Ask user about: languages, frameworks, starter templates, libraries, APIs, deployment targets
       3. For unknowns, offer guidance based on project goals and MVP scope
       4. Document ALL technical choices with rationale (why this choice fits the project)
@@ -3289,11 +3289,11 @@ sections:
       - id: architect-prompt
         title: Architect Prompt
         instruction: This section will contain the prompt for the Architect, keep it short and to the point to initiate create architecture mode using this document as input.
-==================== END: .bmad-core/templates/prd-tmpl.yaml ====================
+==================== END: .carespace-oracle-core/templates/prd-tmpl.yaml ====================
 
 
-==================== START: .bmad-core/checklists/pm-checklist.md ====================
-<!-- Powered by BMAD™ Core -->
+==================== START: .carespace-oracle-core/checklists/pm-checklist.md ====================
+<!-- Powered by CARESPACE-ORACLE™ Core -->
 # Product Manager (PM) Requirements Checklist
 
 This checklist serves as a comprehensive framework to ensure the Product Requirements Document (PRD) and Epic definitions are complete, well-structured, and appropriately scoped for MVP development. The PM should systematically work through each item during the product definition process.
@@ -3664,10 +3664,10 @@ After presenting the report, ask if the user wants:
 
 - **READY FOR ARCHITECT**: The PRD and epics are comprehensive, properly structured, and ready for architectural design.
 - **NEEDS REFINEMENT**: The requirements documentation requires additional work to address the identified deficiencies.
-==================== END: .bmad-core/checklists/pm-checklist.md ====================
+==================== END: .carespace-oracle-core/checklists/pm-checklist.md ====================
 
 
-==================== START: .bmad-core/workflows/discovery-to-prd.yaml ====================
+==================== START: .carespace-oracle-core/workflows/discovery-to-prd.yaml ====================
 workflow:
   id: discovery-to-prd
   name: Discovery to PRD
@@ -3712,4 +3712,4 @@ tips:
   - Use *yolo to skip confirmations and generate full drafts
   - Use *doc-out to output the full document at any point
   - Use *elicit for deeper exploration of any section
-==================== END: .bmad-core/workflows/discovery-to-prd.yaml ====================
+==================== END: .carespace-oracle-core/workflows/discovery-to-prd.yaml ====================
