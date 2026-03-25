@@ -4,7 +4,7 @@ description: >
   Simplified Carespace-Oracle with only Analyst and PM roles for creating project briefs and PRDs.
   Use when user wants to define a product, create a PRD, write a project brief, brainstorm a
   product idea, or do discovery work. Triggers on: "project brief", "PRD", "product requirements",
-  "analyst", "pm", "brainstorm product", "carespace-oracle lite", "define product", "product discovery".
+  "analyst", "pm", "brainstorm product", "carespace-oracle", "define product", "product discovery".
 user-invocable: true
 allowed-tools: "Read, Write, Edit, Bash, Glob, Grep, WebFetch"
 ---
